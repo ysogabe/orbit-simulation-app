@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orbit Simulation
 
-## Getting Started
+Three.jsを使用した地球-月系における人工衛星の軌道シミュレーションアプリケーションです。様々な軌道タイプをインタラクティブに可視化し、宇宙力学の理解を深めることができます。
 
-First, run the development server:
+## 主な機能
+
+- **多様な軌道シミュレーション**
+  - ラグランジュ点軌道 (L1-L5点、ハロー軌道、リサージュ軌道)
+  - 地球同期軌道 (静止衛星軌道、準天頂軌道、モルニヤ軌道)
+  - 月軌道 (月低軌道、フローズン軌道、転移軌道)
+
+- **インタラクティブな操作**
+  - 3Dビューの自由な視点操作
+  - シミュレーション速度の調整
+  - 衛星サイズの変更
+  - 軌道の軌跡表示オプション
+
+- **高品質な視覚表現**
+  - リアルな地球・月のテクスチャ
+  - 美しい軌道の軌跡表示
+  - 宇宙空間の星の表現
+
+## 使用技術
+
+- **フレームワーク**: Next.js 15
+- **3Dレンダリング**: Three.js, React Three Fiber
+- **UI コンポーネント**: Radix UI
+- **スタイリング**: Tailwind CSS
+
+## 動作環境
+
+- Node.js 18.0.0以上
+- モダンなWebブラウザ (WebGL 2.0対応)
+
+## 開発環境のセットアップ
 
 ```bash
+# リポジトリのクローン
+git clone <repository-url>
+cd orbit-simulation
+
+# 依存パッケージのインストール
+npm install
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000)をブラウザで開いてアプリケーションを確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 使い方
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. 右側のパネルから軌道タイプを選択
+   - ラグランジュ点軌道
+   - 地球同期軌道
+   - 月軌道
 
-## Learn More
+2. 各カテゴリ内から具体的な軌道を選択
 
-To learn more about Next.js, take a look at the following resources:
+3. コントロールパネルで以下の設定を調整
+   - シミュレーション速度
+   - 衛星サイズ
+   - 軌跡表示のON/OFF
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. マウス操作で視点を自由に変更
+   - ドラッグ: 視点回転
+   - スクロール: ズーム
+   - 右クリックドラッグ: 画面移動
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ライセンス
 
-## Deploy on Vercel
+MITライセンス
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
